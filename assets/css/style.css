@@ -1,0 +1,116 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.sidebar{
+    height: 100vh;
+    width: 300px;
+    background-color: #000;
+    position: fixed;
+    top:0px;
+    left: -340px;
+    transition:all .5s ease-in-out;
+}
+
+.backDrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    display: none;
+}
+
+.backDrop.active{
+    display: block;
+    animation: fadeIn .5s ease-in-out;
+}
+
+.sidebar.active{
+    left: 0;
+}
+
+.navigationToggle{
+    position: fixed;
+    left : 20px;
+    top : 20px;
+    cursor: pointer;
+}
+
+.logo{
+    display : inline-block;
+    padding: 15px 0px;
+}
+
+#hideNavbar {
+    position: absolute;
+    top: 12px;
+    right: 30px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+#hideNavbar:hover{
+  transform: rotate(180deg);
+}
+
+.backDrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    cursor: pointer;
+    display: none;
+}
+
+.section{
+    height: 100vh;
+    border: 2px solid black;
+    font-size: 42px;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.sidebarMenu li a:link,
+.sidebarMenu li a:visited{
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px;
+    display: block;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+.section:nth-of-type(1){
+    background-color: red;
+}
+
+.section:nth-of-type(2){
+    background-color: yellowgreen;
+}
+
+.section:nth-of-type(3){
+    background-color: navy;
+}
+
+.section:nth-of-type(4){
+    background-color: purple;
+}
+
+@keyframes fadeIn {
+    from{
+       opacity: 0;
+    }
+    to{
+       opacity: 1;
+    }
+}
